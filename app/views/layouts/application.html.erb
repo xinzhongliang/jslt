@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Jdstore</title>
+    <title>江森链条</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,11 +9,17 @@
   </head>
 
   <body>
-    <div class="container container-fluid">
-      <%= render "common/navbar" %>
-      <%= yield %>
+    <div class="main">
+      <div class="container container-fluid">
+        <div class="row">
+          <%= render "common/navbar" %>
+          <%= render "common/flashes" %>
+          <div class="custom-body">
+            <%= yield %>
+          </div>
+        </div>
+      </div>
     </div>
     <%= render "common/footer" %>
-
   </body>
 </html>
