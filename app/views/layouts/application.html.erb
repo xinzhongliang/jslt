@@ -12,7 +12,9 @@
     <div class="main">
       <div class="container container-fluid">
         <div class="row">
-          <%= render "common/navbar" %>
+          <div class="alert-message">
+            <%= render "common/navbar" %>
+          </div>
           <%= render "common/flashes" %>
           <div class="custom-body">
             <%= yield %>

@@ -13,18 +13,22 @@
  }
 .navbar-fixed-top {
     top: 0px;
+
 }
 
 .navbar-fixed-top, .navbar-fixed-bottom {
     position: fixed;
-    top: 0px;
+    top: px;
     right: 0;
     left: 0;
     z-index: 1030;
 }
 
+.alert-message {
+  margin-top: 40px;
+}
 .custom-body {
-  margin-top: 50px;
+  margin-top: 80px;
 }
 
 .footer {
