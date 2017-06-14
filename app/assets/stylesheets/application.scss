@@ -12,14 +12,10 @@
    /* Margin bottom by footer height */
    margin-bottom: 100px;
  }
-.navbar-fixed-top {
-    top: 0px;
 
-}
-
-.navbar-fixed-top, .navbar-fixed-bottom {
+.navbar-fixed-top{
     position: fixed;
-    top: px;
+    top: 0px;
     right: 0;
     left: 0;
     z-index: 1030;
@@ -38,8 +34,8 @@
    width: 100%;
    /* Set the fixed height of the footer here */
    height: 80px;
-   background-color: white;
-   margin: 0 -15px;
+   background-color: #E1F5FE;
+   margin: 0px;
 
    p {
       color: #222222;
