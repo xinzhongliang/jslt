@@ -8,6 +8,10 @@ Rails.application.routes.draw do
     resources :products
   end
 
+  namespace :account do
+    resources :orders
+  end
+
   resources :products do
     member do
       post :add_to_cart
@@ -23,4 +27,5 @@ Rails.application.routes.draw do
 
   resources :cart_items
   resources :orders
+
 end
