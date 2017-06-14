@@ -1,0 +1,8 @@
+<h2>新增分类</h2>
+
+<%= simple_form_for [:admin, @category] do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs"><%= f.input :name %></div>
+  <div class="form-acitons"><%= f.button :submit %></div>
+<% end %>
