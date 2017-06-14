@@ -15,6 +15,8 @@ class OrdersController < ApplicationController
         order_detail.quantity = cart_item.quantity
         order_detail.save
       end
+      current_cart.clean!
+      OrderMailer.notify_order_placed(@order).deliver!
       redirect_to order_path(@order.token)
     else
       render 'carts/checkout'
