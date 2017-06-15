@@ -10,7 +10,7 @@
 
 .body {
    /* Margin bottom by footer height */
-   margin-bottom: 100px;
+   margin-bottom: 150px;
  }
 
 .navbar-fixed-top{
@@ -36,9 +36,13 @@
    height: 80px;
    background-color: #E1F5FE;
    margin: 0px;
+   margin-bottom: -150px;
 
    p {
       color: #222222;
      margin-top: 30px;
    }
   }
+.clear-footer {
+  margin-bottom: 150px;
+}
