@@ -83,4 +83,18 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+  config.action_mailer.default_url_options = { host: '你的herokuapp地址'}
+
+  config.action_mailer.delivery_method = :smtp
+ActionMailer::Base.smtp_settings = {
+  address: "smtpdm.aliyun.com",
+  port: 25,
+  domain: "heroku.com",
+  openssl_verify_mode: 'none',
+  authentication: "login",
+  enable_stattls_auto: false,
+  user_name: ENV["ALI_CLOUD_USER_NAME"],
+  password: ENV["ALI_CLOUD_USER_KEY"],
+  }
+  
 end

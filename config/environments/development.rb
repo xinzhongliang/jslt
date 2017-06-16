@@ -52,5 +52,19 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
   config.action_mailer.default_url_options = { host: 'localhost:3000'}
-  config.action_mailer.delivery_method = :letter_opener
+  #config.action_mailer.delivery_method = :letter_opener
+
+  config.action_mailer.delivery_method = :smtp
+  ActionMailer::Base.smtp_settings = {
+    address: "smtpdm.aliyun.com",
+    port: 25,
+    domain: "heroku.com",
+    openssl_verify_mode: 'none',
+    authentication: "login",
+    enable_stattls_auto: false,
+    user_name: ENV["ALI_CLOUD_USER_NAME"],
+    password: ENV["ALI_CLOUD_USER_KEY"],
+  }
+
+  ActionMailer::Base.raise_delivery_errors = true
 end
