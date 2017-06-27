@@ -1,5 +1,5 @@
 <h2> 链条列表 </h2>
-<div class="pull-right" style="padding-bottom: 20px;">
+<div class="col-xs-1 pull-right" >
   <%= link_to("新增产品", new_admin_product_path, class: "btn btn-primary btn-sm") %>
 </div>
 <table class="table table-bordered">
@@ -8,6 +8,7 @@
       <th>#</th>
       <th width="220">产品图片</th>
       <th>品名</th>
+      <th>详情</th>
       <th>价格</th>
       <th width="100"> 选项</th>
     </tr>
@@ -29,6 +30,9 @@
         </td>
         <td>
           <%= product.title %>
+        </td>
+        <td>
+          <%= product.description %>
         </td>
         <td>
           <%= product.price %>

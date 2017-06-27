@@ -22,6 +22,12 @@
   <div class="group">
     <%= f.input :image, as: :file %>
   </div>
+  <p>
+  <label>
+    <%= f.check_box :remove_image %>
+    Remove image
+  </label>
+</p>
 
   <%= f.submit "确认", data: { disable_with: "Submitting..."} %>
 <% end %>

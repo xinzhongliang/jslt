@@ -9,17 +9,20 @@
   </head>
 
   <body>
-    <div class="container container-fluid clear-footer">
-      <div class="row">
-        <div class="alert-message">
-          <%= render "common/navbar" %>
-        </div>
-        <%= render "common/flashes" %>
-        <div class="custom-body">
-          <%= yield %>
+    <div class="clear-footer">
+      <div class="container container-fluid">
+        <%= render "common/navbar" %>
+        <div class="row">
+          <div class="alert-message custom-body">
+          <%= render "common/flashes" %>
+          </div>
+          <div class="custom-body">
+            <%= yield %>
+          </div>
         </div>
       </div>
     </div>
+
     <%= render "common/footer" %>
   </body>
 </html>
